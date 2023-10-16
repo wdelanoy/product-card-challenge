@@ -1,0 +1,155 @@
+:root {
+
+/* Primary Colors */
+
+--clr-dark-cyan: hsl(158, 36%, 37%);
+--clr-darker-cyan: hsl(159, 36%, 19%);
+--clr-cream: hsl(30, 38%, 92%);
+
+/* Neutral Colors */
+
+--clr-dark-blue: hsl(212, 21%, 14%);
+--clr-gray-blue: hsl(228, 12%, 48%);
+--clr-white: hsl(0, 0%, 100%);
+
+font-family: 'Fraunces', serif;
+font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--clr-cream);
+  margin: 0;
+  height: 85vh;
+}
+
+
+.container {
+  /* border: 1px solid red; */
+  background: var(--clr-white);
+  display: flex;
+  border-radius: 7px;
+  line-height: 0;
+  padding: 0;
+  margin: 10% auto;
+  width: 546px;
+  justify-content: center;
+  
+
+}
+
+.sans-serif {
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  color: var(--clr-gray-blue);
+}
+
+.prod-image {
+  height: 410px;
+  border-radius: 7px 0 0 7px;
+}
+
+.description {
+  padding: .5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5rem;
+  margin-top: 1em;
+  
+}
+
+.prod-type {
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-weight: 400;
+  font-size: .9em;
+}
+
+.prod-name {
+  font-size: 2.2em;
+  line-height: 1em;
+  margin: 0;
+}
+
+.prod-description {
+  margin: 1em 0 ;
+}
+
+.pricing {
+  display: flex;
+  
+
+}
+
+.prod-pricing {
+  font-size: 2rem;
+  margin: .5em 0 ;
+  color: var(--clr-dark-cyan);
+  
+}
+
+.no-disc-pricing {
+  margin: 1em;
+  text-decoration: line-through;
+}
+
+.add-cart {
+  display: flex;
+}
+
+.add-cart-text {
+  background: var(--clr-dark-cyan);
+  text-decoration: none;
+  color: var(--clr-white);
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 700;
+  padding: .75em;
+  margin-top: 2em;
+  border-radius: 7px;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.add-cart-text::before {
+  content: url("images/icon-cart.svg");
+  position: relative;
+  left: -10px;
+  top: 4px;  
+}
+
+
+.add-cart-text:hover {
+  background: var(--clr-darker-cyan);
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 350px;
+  }
+  
+  .prod-image {
+    width: 350px;
+    height: auto;
+    border-radius: 7px 7px 0 0;
+  }
+
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .prod-name {
+    font-size: 2.3em;
+  }
+
+  .add-cart {
+    margin-bottom: 1.5em;
+    display: flex;  
+  }
+
+  
+}
+
